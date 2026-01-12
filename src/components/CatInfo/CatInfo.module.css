@@ -1,0 +1,12 @@
+.card {
+    border-width: 8px;
+    border: solid;
+}
+
+.available {
+    border-color: green;
+}
+
+.taken {
+    border-color: red;
+}
