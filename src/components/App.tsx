@@ -4,9 +4,15 @@ import Footer from "./Footer/Footer";
 import Header from "./Header/Header";
 import cats from "../cats.json";
 import Section from "./Section/Section";
+import FormOrder from "./FormOrder/FormOrder";
 
 
 export default function App() {
+
+  function handleOrder(userName: string) {
+    console.log(userName);
+    
+  }
   return (
     <>
       <Header />
@@ -18,6 +24,11 @@ export default function App() {
         </Section>
         <Section title="Taken cats">
           <CatsList cats={cats.filter((cat) => !cat.available)} />
+        </Section>
+
+        {/* form*/}
+        <Section title="Order">
+          <FormOrder onSubmit={handleOrder} />
         </Section>
       </main>
       <Footer />

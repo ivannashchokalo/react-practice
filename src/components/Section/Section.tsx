@@ -8,7 +8,7 @@ interface SectionProps {
 export default function Section({ title, children }: SectionProps) {
     return (
         <section>
-            {title && <h2>{title}</h2>} // робимо умову, якщо татл не передається, то не буде рендеритись пустий заголовок
+            {title && <h2>{title}</h2>} 
             {children}
         </section>
     )
