@@ -1,0 +1,83 @@
+.characterList {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 32px 16px;
+}
+
+.characterTitle {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 24px;
+  color: #1f2933;
+}
+
+/* список */
+.characters {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+/* картка персонажа */
+.characterItem {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.characterItem:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.08);
+}
+
+.characterName {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #111827;
+}
+
+.characterEmail {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 16px;
+  word-break: break-word;
+}
+
+/* кнопка */
+.openDetailsButton {
+  display: inline-block;
+  padding: 10px 14px;
+
+  background-color: #2563eb;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.openDetailsButton:hover {
+  background-color: #1d4ed8;
+}
+
+.openDetailsButton:active {
+  transform: scale(0.97);
+}
+
+/* loading / error */
+.message {
+  font-size: 16px;
+  color: #374151;
+}

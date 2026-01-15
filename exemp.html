@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Star Wars Characters</title>
+    <link rel="stylesheet" href="App.module.css" />
+  </head>
+  <body>
+    <!-- Головний контейнер сторінки -->
+    <div id="root" class="app-container">
+      <!-- Заголовок сторінки -->
+      <header class="header">
+        <h1>Star Wars Characters</h1>
+        <button class="open-add-modal-button">Add Character</button>
+      </header>
+
+      <!-- Список персонажів -->
+      <section class="character-list">
+        <ul class="characters">
+          <li class="character-item">
+            <h2 class="character-name">Luke Skywalker</h2>
+            <p class="character-details">Height: 172, Mass: 77</p>
+            <button class="open-details-button">View Details</button>
+          </li>
+          <li class="character-item">
+            <h2 class="character-name">Darth Vader</h2>
+            <p class="character-details">Height: 202, Mass: 136</p>
+            <button class="open-details-button">View Details</button>
+          </li>
+          <!-- Додаткові персонажі будуть додаватися сюди -->
+        </ul>
+      </section>
+
+      <!-- Модалка: додати персонажа -->
+      <div class="modal-backdrop hidden" id="add-modal">
+        <div class="modal">
+          <button class="close-button">&times;</button>
+          <h2>Add New Character</h2>
+          <form class="add-character-form">
+            <label>
+              Name:
+              <input type="text" name="name" />
+            </label>
+            <label>
+              Height:
+              <input type="number" name="height" />
+            </label>
+            <label>
+              Mass:
+              <input type="number" name="mass" />
+            </label>
+            <button type="submit">Add Character</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Модалка: деталі персонажа -->
+      <div class="modal-backdrop hidden" id="details-modal">
+        <div class="modal">
+          <button class="close-button">&times;</button>
+          <h2 class="character-name">Character Name</h2>
+          <ul class="character-details-list">
+            <li><strong>Height:</strong> 0</li>
+            <li><strong>Mass:</strong> 0</li>
+            <li><strong>Hair Color:</strong> Unknown</li>
+            <li><strong>Skin Color:</strong> Unknown</li>
+            <li><strong>Gender:</strong> Unknown</li>
+            <li><strong>Birth Year:</strong> Unknown</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
